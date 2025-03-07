@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabut Keren</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="fade-text">✨ 🐵 Hallo 🐵✨</h1>
+      <p>Coba Klik tomboh Dibawah!</p>
+      <button id="siniButton">Sini</button>
+
+      <div id="starContainer" class="hidden">
+        <div class="stars">⭐ ⭐ ⭐ ⭐ ⭐</div>
+        <p class="funny-text">Wkwk keren monyet gw</p>
+      </div>
+    </div>
+
+    <!-- Tambahkan elemen audio -->
+    <audio id="clickSound">
+      <source src="click.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+      document
+        .getElementById("siniButton")
+        .addEventListener("click", function () {
+          document.getElementById("starContainer").classList.toggle("hidden");
+
+          // Mainkan efek suara
+          document.getElementById("clickSound").play();
+        });
+    </script>
+  </body>
+</html>
